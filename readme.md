@@ -6,7 +6,7 @@
 <li>Check composer.json if pusher installed correctly</li>
 <li>Install node.js [for npm command]</li>
 <li>Update <code>.env</code> file (do not forget to set BROADCAST_DRIVER)</li>
-  <li>Now go to <code>config/broadcasting.php</code> and update <code>options</code> of <code>pusher</code>
+  <li>Now go to <code>config/broadcasting.php</code> and update <code>options</code> of <code>pusher</code> as like below:
   <blockquote>
     'pusher' => [<br/>
             'driver' => 'pusher',<br/>
