@@ -8,16 +8,16 @@
 <li>Update <code>.env</code> file (do not forget to set BROADCAST_DRIVER)</li>
   <li>Now go to <code>config/broadcasting.php</code> and update <code>options</code> of <code>pusher</code>
   <blockquote>
-    'pusher' => [
-            'driver' => 'pusher',
-            'key' => env('PUSHER_APP_KEY'),
-            'secret' => env('PUSHER_APP_SECRET'),
-            'app_id' => env('PUSHER_APP_ID'),
-            'options' => [
-                'cluster' => 'ap2',
-				'encrypted' => true,
-            ],
-        ],
+    'pusher' => [<br/>
+            'driver' => 'pusher',<br/>
+            'key' => env('PUSHER_APP_KEY'),<br/>
+            'secret' => env('PUSHER_APP_SECRET'),<br/>
+            'app_id' => env('PUSHER_APP_ID'),<br/>
+            'options' => [<br/>
+                'cluster' => 'ap2',<br/>
+		'encrypted' => true,<br/>
+            ],<br/>
+        ],<br/>
     </blockquote>
   </li>
 <li>Create event and notification</li>
