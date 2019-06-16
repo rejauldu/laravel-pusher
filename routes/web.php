@@ -17,7 +17,7 @@ Route::get('/', function () {
 Route::get('/notification', function () {
 	return view('notification');
 });
-Route::get('/send', function () {
-    event(new App\Events\NotificationEvent('Now: '.time()));
+Route::get('/send/{message?}', function ($message) {
+    event(new App\Events\NotificationEvent($message));
 	return 'Success! See the console of "/notification" link';
 });
