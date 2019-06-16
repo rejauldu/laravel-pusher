@@ -6,6 +6,20 @@
 <li>Check composer.json if pusher installed correctly</li>
 <li>Install node.js [for npm command]</li>
 <li>Update <code>.env</code> file (do not forget to set BROADCAST_DRIVER)</li>
+  <li>Now go to <code>config/broadcasting.php</code> and update <code>options</code> of <code>pusher</code>
+  <blockquote>
+    'pusher' => [
+            'driver' => 'pusher',
+            'key' => env('PUSHER_APP_KEY'),
+            'secret' => env('PUSHER_APP_SECRET'),
+            'app_id' => env('PUSHER_APP_ID'),
+            'options' => [
+                'cluster' => 'ap2',
+				'encrypted' => true,
+            ],
+        ],
+    </blockquote>
+  </li>
 <li>Create event and notification</li>
 <li>Uncomment <code>EventServiceProvider</code> from <code>config/app</code>.</li>
 <li>Create 2 routes; One for generating event and other for viewing.</li>
