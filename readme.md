@@ -17,3 +17,12 @@
 <li>Run: <code>npm run watch</code> (this command will compile and build)</li>
 <li>Check eveerything should work</li>
 </ol>
+<p>Error:</p>
+<p>If you find any error like:</p>
+<p>Class 'Pusher' not found</p>
+or,
+<p>Oops, Something went wrong</p>
+<p>Solution:</p>
+A solution is to create an alias in config/app.php. Under the 'aliases' key, add this to the array in the "Third Party Aliases" section:
+
+<blockquote>'Pusher' => Pusher\Pusher::class,</blockquote>
