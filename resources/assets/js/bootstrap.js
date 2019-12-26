@@ -46,9 +46,10 @@ if (token) {
 import Echo from 'laravel-echo'
 
 window.Pusher = require('pusher-js');
+
 window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: 'cfebe8cd92a63792cdac',
-    cluster: 'ap2',
+    key: 'e89bcd690994c3ce8f62',
+	cluster: 'ap2',
     encrypted: true
 });
