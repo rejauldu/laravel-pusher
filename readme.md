@@ -17,7 +17,7 @@
                 'cluster' => 'ap2',<br/>
 		'encrypted' => true,<br/>
             ],<br/>
-        ],<br/>
+        ],
     </pre></blockquote>
   </li>
 <li>Create event and notification</li>
