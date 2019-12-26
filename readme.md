@@ -2,12 +2,12 @@
 <ol>
 <li>Create account to pusher website</li>
 <li>Install laravel project-5.5[command]</li>
-<li>install <code>pusher-php-server</code> [command]</li>
+<li>Run to install <code>composer require pusher/pusher-php-server</code> [command]</li>
 <li>Check composer.json if pusher installed correctly</li>
 <li>Install node.js [for npm command]</li>
 <li>Update <code>.env</code> file (do not forget to set BROADCAST_DRIVER)</li>
   <li>Now go to <code>config/broadcasting.php</code> and update <code>options</code> of <code>pusher</code> as like below:
-  <blockquote>
+  <blockquote><pre>
     'pusher' => [<br/>
             'driver' => 'pusher',<br/>
             'key' => env('PUSHER_APP_KEY'),<br/>
@@ -18,7 +18,7 @@
 		'encrypted' => true,<br/>
             ],<br/>
         ],<br/>
-    </blockquote>
+    </pre></blockquote>
   </li>
 <li>Create event and notification</li>
 <li>Uncomment <code>EventServiceProvider</code> from <code>config/app</code>.</li>
