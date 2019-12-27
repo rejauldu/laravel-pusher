@@ -11,7 +11,7 @@ use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 
-class NotificationEvent implements ShouldBroadcastNow
+class ChatEvent implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -33,7 +33,7 @@ class NotificationEvent implements ShouldBroadcastNow
      */
     public function broadcastOn()
     {
-        return new Channel('all-user');
+        return new Channel('chat');
     }
 	/*
 	* Defines channel name
@@ -44,6 +44,6 @@ class NotificationEvent implements ShouldBroadcastNow
 	 * @return array
 	 */
 	public function broadcastWith() {
-		return ['message' => $this->message, 'name' => 'Rejaul'];
+		return [$this->message];
 	}
 }
