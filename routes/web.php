@@ -18,6 +18,6 @@ Route::get('/notification', function () {
 	return view('notification');
 });
 Route::get('/send/{message?}', function ($message) {
-    event(new App\Events\NotificationEvent($message));
+    event(new App\Events\ChatEvent($message));
 	return 'Success! See the console of "/notification" link';
 });
