@@ -50,7 +50,8 @@ App\Providers\BroadcastServiceProvider::class,</pre></blockquote>
 <li>Go to <code>routes/channels.php</code> append add the following code
 <blockquote><pre>
 Broadcast::channel('chat', function ($user) {
-	return ['id' => $user->id, 'name' => $user->name]; //Change as your need
+	return ['id' => $user->id, 'name' => $user->name]; /* These informations in required in Echo.joining at frontend */
+	//return Auth::check();
 });
 </pre></blockquote>
 </li>
