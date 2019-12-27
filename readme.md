@@ -32,7 +32,7 @@
 <li>Do some refreshing work as like: use version (ie. <code>?{{ time() }}</code>) to refresh <code>app.js</code> in view (<code>notification.bloade.js</code>), Maybe restart server etc.</li>
 <li>Check eveerything should work</li>
 </ol>
-Make your channel private or presence (I will make presence)
+<h3>Make your channel private or presence (I will make presence)</h3>
 <ol>
 	<li>Go to Chat Event and change:
 	<blockquote><pre>
