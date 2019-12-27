@@ -9,8 +9,8 @@
 	<script src="{{ asset('js/app.js') }}"></script>
 	<script>
 	Echo.join('chat')
-    .listen('NotificationEvent', (e) => {
-        console.log(e.message);
+    .listen('ChatEvent', (e) => {
+        console.log(e);
     });
 </script>
 </body>
