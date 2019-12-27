@@ -8,7 +8,7 @@
 	<div id="app"></div>
 	<script src="{{ asset('js/app.js') }}"></script>
 	<script>
-	Echo.channel('all-user')
+	Echo.join('chat')
     .listen('NotificationEvent', (e) => {
         console.log(e.message);
     });
