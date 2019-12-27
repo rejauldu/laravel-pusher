@@ -55,7 +55,7 @@ Broadcast::channel('chat', function ($user) {
 </pre></blockquote>
 </li>
 <li>
-In you view (notification.blade.php in this example), change <code>Echo.listen</code> to <code>Echo.join</code>.
+In your view (notification.blade.php in this example), change <code>Echo.listen</code> to <code>Echo.join</code>.
 <blockquote><pre>
 Echo.join('chat')
     .listen('ChatEvent', (e) => {
