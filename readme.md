@@ -34,27 +34,28 @@
 </ol>
 <h3>Make your channel private or presence (I will make presence)</h3>
 <ol>
-	<li>Go to Chat Event and change:
-	<blockquote><pre>
-	public function broadcastOn()
-	{
-		return new PresenceChannel('chat');
-	}
-    </pre></blockquote></li>
-	<li>
-		There are two Service Providers with Same name but different namespace in config/app.php. Uncomment them.
-		<blockquote><pre>Illuminate\Broadcasting\BroadcastServiceProvider::class,
-		App\Providers\BroadcastServiceProvider::class,</pre></blockquote>
-	</li>
-	<li>
-		In you view (notification.blade.php in this example), change <code>Echo.listen</code> to <code>Echo.join</code>.
-		<blockquote><pre>
-			Echo.join('chat')
-			    .listen('ChatEvent', (e) => {
-				console.log(e);
-			    });
-		</pre></blockquote>
-	</li>
+<li>Go to Chat Event and change:
+<blockquote><pre>
+public function broadcastOn()
+{
+	return new PresenceChannel('chat');
+}
+</pre></blockquote></li>
+<li>
+There are two Service Providers with Same name but different namespace in config/app.php. Uncomment them.
+<blockquote><pre>
+Illuminate\Broadcasting\BroadcastServiceProvider::class,
+App\Providers\BroadcastServiceProvider::class,</pre></blockquote>
+</li>
+<li>
+In you view (notification.blade.php in this example), change <code>Echo.listen</code> to <code>Echo.join</code>.
+<blockquote><pre>
+Echo.join('chat')
+    .listen('ChatEvent', (e) => {
+	console.log(e);
+    });
+</pre></blockquote>
+</li>
 </ol>
 <p>Error:</p>
 <p>If you find any error like:</p>
