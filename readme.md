@@ -29,7 +29,32 @@
 <li>Update <code>resources/assets/js/bootstrap.js</code></li>
 <li>Create view with <code>Echo.channel</code> and <code>csrf meta</code></li>
 <li>Run: <code>npm run watch</code> (this command will compile and build)</li>
+<li>Do some refreshing work as like: use version (ie. <code>?{{ time() }}</code>) to refresh <code>app.js</code> in view (<code>notification.bloade.js</code>), Maybe restart server etc.</li>
 <li>Check eveerything should work</li>
+</ol>
+Make your channel private or presence (I will make presence)
+<ol>
+	<li>Go to Chat Event and change:
+	<blockquote><pre>
+	public function broadcastOn()
+	{
+		return new PresenceChannel('chat');
+	}
+    </pre></blockquote></li>
+	<li>
+		There are two Service Providers with Same name but different namespace in config/app.php. Uncomment them.
+		<blockquote>Illuminate\Broadcasting\BroadcastServiceProvider::class,
+		App\Providers\BroadcastServiceProvider::class,</blockquote>
+	</li>
+	<li>
+		In you view (notification.blade.php in this example), change <code>Echo.listen</code> to <code>Echo.join</code>.
+		<blockquote><pre>
+			Echo.join('chat')
+			    .listen('ChatEvent', (e) => {
+				console.log(e);
+			    });
+		</pre></blockquote>
+	</li>
 </ol>
 <p>Error:</p>
 <p>If you find any error like:</p>
