@@ -50,7 +50,7 @@ App\Providers\BroadcastServiceProvider::class,</pre></blockquote>
 <li>Go to <code>routes/channels.php</code> append add the following code
 <blockquote><pre>
 Broadcast::channel('chat', function ($user) {
-	return ture; //Change to if you want
+	return ture; //Change as your need
 });
 </pre></blockquote>
 </li>
